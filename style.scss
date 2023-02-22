@@ -1,7 +1,14 @@
 .game {
   position: relative;
-  width: 180px;
+  width: calc(3 * var(--cell-size));
   border: 2px solid #000;
+
+  --cell-size: 100px;
+  --player-size: calc(0.8 * var(--cell-size));
+  --base-shift: calc(
+  (var(--cell-size) - var(--player-size)) / 2
+ );
+
 }
 
 .game__field {
@@ -11,43 +18,43 @@
 
 .game__cell {
   box-sizing: border-box;
-  width: 60px;
-  height: 60px;
+  width: var(--cell-size);
+  height: var(--cell-size);
   border: 1px dashed #000;
 }
 
 .game__player {
   position: absolute;
-  top: 36px;
-  left: 36px;
-  width: 48px;
-  height: 48px;
+  top: var(--base-shift);
+  left: var(--base-shift);
+  width: var(--player-size);
+  height: var(--player-size);
   border-radius: 50%;
   background-color: #000;
 }
 
 .game__player--row--1 {
-  top: 36px;
+  top: var(--base-shift);
 }
 
 .game__player--row--2 {
-  top: 96px;
+  top: calc(var(--cell-size) + var(--base-shift));
 }
 
 .game__player--row--3 {
-  top: 156px;
+  top: calc( 2 * var(--cell-size) + var(--base-shift));
 }
 
 .game__player--col--1 {
-  left: 36px;
+  left: var(--base-shift);
 }
 
 .game__player--col--2 {
-  left: 96px;
+  left: calc(var(--cell-size) + var(--base-shift));
 }
 
 .game__player--col--3 {
-  left: 156px;
+  left: calc( 2 * var(--cell-size) + var(--base-shift));;
 }
 
 .game__player--color--red {
@@ -64,4 +71,4 @@
 
 
 
-/*# sourceMappingURL=style.scss.map */
+/*# sourceMappingURL=style.css.map */
