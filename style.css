@@ -1,67 +1,18 @@
-.game {
-  position: relative;
-  width: 180px;
-  border: 2px solid #000;
+/* Error: Undefined variable.
+ *   ,
+ * 9 |     width: $col-count * $cell-size;
+ *   |            ^^^^^^^^^^
+ *   '
+ *   styles\blocks\game.scss 9:12  @use
+ *   styles\main.scss 2:1          root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 9 \2502      width: $col-count * $cell-size;\a   \2502             ^^^^^^^^^^\a   \2575 \a   styles\\blocks\\game.scss 9:12  @use\a   styles\\main.scss 2:1          root stylesheet";
 }
-
-.game__field {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.game__cell {
-  box-sizing: border-box;
-  width: 60px;
-  height: 60px;
-  border: 1px dashed #000;
-}
-
-.game__player {
-  position: absolute;
-  top: 36px;
-  left: 36px;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: #000;
-}
-
-.game__player--row--1 {
-  top: 36px;
-}
-
-.game__player--row--2 {
-  top: 96px;
-}
-
-.game__player--row--3 {
-  top: 156px;
-}
-
-.game__player--col--1 {
-  left: 36px;
-}
-
-.game__player--col--2 {
-  left: 96px;
-}
-
-.game__player--col--3 {
-  left: 156px;
-}
-
-.game__player--color--red {
-  background-color: red;
-}
-
-.game__player--color--green {
-  background-color: green;
-}
-
-.game__player--color--blue {
-  background-color: blue;
-}
-
-
-
-/*# sourceMappingURL=style.css.map */

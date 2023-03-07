@@ -1,0 +1,5 @@
+$cell-size: 60px;
+$player-size: 0.8 * $cell-size;
+$base-shift: calc(($cell-size - $player-size) / 2);
+$row-count: 5;
+$col-count: 3;
