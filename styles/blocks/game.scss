@@ -6,7 +6,7 @@
 
 .game {
     position: relative;
-    width: $col-count * $cell-size;
+    width: variables.$col-count * variables.$cell-size;
     border: 2px solid #000;
   
     &__field {
